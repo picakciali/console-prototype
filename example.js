@@ -13,7 +13,7 @@ class AClass{
 class BClass extends AClass{
     constructor(){
         super()
-        this.bProp = 'aProp'
+        this.bProp = 'bProp'
     }
 
     getBprop(){
@@ -44,4 +44,4 @@ class DClass extends CClass{
 }
 
 const o = new DClass()
-console.prototype(DClass)
+console.prototype(o)

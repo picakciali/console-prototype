@@ -1,6 +1,6 @@
 {
   "name": "console_prototype",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "console prototype",
   "main": "index.js",
   "scripts": {
