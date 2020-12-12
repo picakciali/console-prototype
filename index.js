@@ -1,6 +1,6 @@
-
-
-
+/**
+ * Author: Ali PIÇAKCI alipicakci@gmail.com
+ */
 ;(function () {
 
         if (typeof console.prototype === 'function') {
