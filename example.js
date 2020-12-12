@@ -45,20 +45,3 @@ class DClass extends CClass{
 
 const o = new DClass()
 console.prototype(DClass)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
