@@ -10,9 +10,7 @@ This module expands the original consol object and gains a [prototype] property.
     //root
       |_static properties
       |_instance constructor
-        |_this.x
-        |_this.y
-      |_and chain 
+        |_and chain 
     
 ```
 ## usage 
