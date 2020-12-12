@@ -8,6 +8,8 @@
     }
 
     var logTree = require('console-log-tree')
+
+    
     const getConstructorName = (o) => {
         if (o.prototype && o.prototype.constructor) {
             return o.prototype.constructor.name
