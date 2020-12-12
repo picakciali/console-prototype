@@ -17,7 +17,7 @@ class BClass extends AClass{
     }
 
     getBprop(){
-        return this.aProp
+        return this.bProp
     }
 }
 
@@ -28,7 +28,7 @@ class CClass extends BClass{
     }
 
     getCprop(){
-        return this.aProp
+        return this.cProp
     }
 }
 
@@ -39,7 +39,7 @@ class DClass extends CClass{
     }
 
     getDprop(){
-        return this.aProp
+        return this.dProp
     }
 }
 
