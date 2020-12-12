@@ -15,5 +15,14 @@
   "license": "MIT",
   "dependencies": {
     "console-log-tree": "^1.2.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/picakciali/console-prototype.git"
+  },
+  "bugs": {
+    "url": "https://github.com/picakciali/console-prototype/issues"
+  },
+  "homepage": "https://github.com/picakciali/console-prototype#readme"
 }

@@ -44,7 +44,7 @@ class DClass extends CClass{
 }
 
 const o = new DClass()
-console.prototype(o)
+console.prototype(DClass)
 
 
 
