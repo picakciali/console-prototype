@@ -4,6 +4,9 @@ This module expands the original consol object and gains a [prototype] property.
 
 ## usage
 ```javascript
+    require('console_prototype')
+    
+    
     console.prototype({})
     console.prototype(new Class())
     
@@ -15,8 +18,9 @@ This module expands the original consol object and gains a [prototype] property.
 ```
 ## usage 
 ```javascript
-require('./index.js')
-
+require('console_prototype')
+    
+    
 class AClass{
     constructor(){
         this.aProp = 'aProp'

@@ -43,5 +43,8 @@ class DClass extends CClass{
     }
 }
 
+DClass.a = 'a'
+DClass.b = 'b'
+DClass.c = 'c'
 const o = new DClass()
 console.prototype(o)
