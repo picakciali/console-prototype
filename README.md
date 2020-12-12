@@ -16,6 +16,12 @@ This module expands the original consol object and gains a [prototype] property.
         |_and chain 
     
 ```
+
+## install
+```javascript
+    npm i console_prototype
+```
+
 ## usage 
 ```javascript
 require('console_prototype')
