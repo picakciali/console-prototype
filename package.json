@@ -1,0 +1,19 @@
+{
+  "name": "console_prototype",
+  "version": "1.0.0",
+  "description": "console prototype",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "console",
+    "prototype",
+    "log"
+  ],
+  "author": "Ali PIÇAKCI",
+  "license": "MIT",
+  "dependencies": {
+    "console-log-tree": "^1.2.1"
+  }
+}
