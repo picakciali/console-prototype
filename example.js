@@ -1,5 +1,3 @@
-
-
 require('./index.js')
 
 class AClass{
@@ -44,7 +42,6 @@ class DClass extends CClass{
         return this.aProp
     }
 }
-
 
 const o = new DClass()
 console.prototype(o)
