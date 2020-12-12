@@ -52,5 +52,7 @@ const o = new DClass()
 console.prototype(o)
 
 ```
+## out
+![alt text](https://i.hizliresim.com/wIMWA2.png)
 
 
