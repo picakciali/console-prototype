@@ -70,15 +70,12 @@
 
             keysNodeAdd(obj, thisNode)
         }
-
-
         //prototypes
         let protos = getProtos(obj)
-
-
         protos.forEach(p => {
             protoNode.children.push(p)
         })
+
         instanceNode.children.push(thisNode)
         instanceNode.children.push(protoNode)
 
