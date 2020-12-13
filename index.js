@@ -29,7 +29,7 @@
         })
     }
 
-    //{name: x , children:[name:x , children :[]]}
+
     const getProtos = (obj) => {
         let root = {}
         root.name = getProtoConstructorName(obj)
