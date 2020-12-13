@@ -10,11 +10,13 @@
     const logTree = require('console-log-tree')
 
 
+    const getProtoConstructorName = (o) => o.__proto__ && o.__proto__.constructor ? o.__proto__.constructor.name : 'Object'
+
     const getConstructorName = (o) => {
         if (o.prototype && o.prototype.constructor) {
             return o.prototype.constructor.name
         }
-        return o.__proto__ && o.__proto__.constructor ? o.__proto__.constructor.name : 'Object'
+        return getProtoConstructorName(o)
     }
 
     const isFunction = (o) => {
@@ -27,26 +29,35 @@
         })
     }
 
+    //{name: x , children:[name:x , children :[]]}
     const getProtos = (obj) => {
-        let protos = []
+        let root = {}
+        root.name = getProtoConstructorName(obj)
+        root.children = []
         let o = obj
+        let n
         while (o != null) {
             let next = Object.getPrototypeOf(o)
             if (next != null) {
                 let propNames = Object.getOwnPropertyNames(next)
                 let node = {}
-                node.name = o.__proto__ && o.__proto__.constructor ? o.__proto__.constructor.name : 'Object'
+                node.name = getProtoConstructorName(o)
                 node.children = []
                 propNames.forEach(n => {
                     node.children.push({ name: n })
                 })
-                protos.push(node)
+                if (!n) {
+                    root.children.push(node)
+                }else{
+                  n.children.push(node)  
+                }
+                n = node
                 o = next
             } else {
                 o = null
             }
         }
-        return protos
+        return root
     }
 
     function createTree(obj) {
@@ -72,9 +83,7 @@
         }
         //prototypes
         let protos = getProtos(obj)
-        protos.forEach(p => {
-            protoNode.children.push(p)
-        })
+        protoNode.children.push(protos)
 
         instanceNode.children.push(thisNode)
         instanceNode.children.push(protoNode)

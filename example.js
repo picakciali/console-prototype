@@ -51,6 +51,10 @@ Fnc.prototype.getA = function () {
     return this.a
 }
 
+//static prop add
+DClass.a = 'a'
+DClass.b = 'b'
+
 //DClass instance
 console.prototype(new DClass())
 
