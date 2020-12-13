@@ -7,7 +7,7 @@
         return
     }
 
-    var logTree = require('console-log-tree')
+    const logTree = require('console-log-tree')
 
 
     const getConstructorName = (o) => {
