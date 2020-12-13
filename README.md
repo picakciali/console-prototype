@@ -3,12 +3,12 @@ This module expands the original consol object and gains a [prototype] property.
 
 ## install
 ```javascript
-    npm i console_prototype
+    npm i console-prototype
 ```
 
 ## usage 
 ```javascript
-require('console_prototype') 
+require('console-prototype') 
 
 class AClass{
     constructor(){
@@ -62,7 +62,7 @@ console.prototype(o)
 
 ## usage 2
 ```javascript
-const consoleProto =require('console_prototype') 
+const consoleProto =require('console-prototype') 
 const o = new DClass()
 consoleProto(o)
 ```
