@@ -111,5 +111,6 @@
 
         this.log.apply(this, out)
     }
-})()
 
+    module.exports = console.prototype.bind(console)
+})()

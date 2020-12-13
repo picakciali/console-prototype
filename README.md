@@ -8,9 +8,8 @@ This module expands the original consol object and gains a [prototype] property.
 
 ## usage 
 ```javascript
-require('console_prototype')
-    
-    
+require('console_prototype') 
+
 class AClass{
     constructor(){
         this.aProp = 'aProp'
@@ -60,5 +59,12 @@ console.prototype(o)
 ```
 ## out
 ![alt text](https://i.hizliresim.com/rxmgWm.png)
+
+## usage 2
+```javascript
+const consoleProto =require('console_prototype') 
+const o = new DClass()
+consoleProto(o)
+```
 
 

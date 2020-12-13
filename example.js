@@ -1,4 +1,4 @@
-require('./index.js')
+const protoLog =require('./index.js')
 
 class AClass{
     constructor(){
@@ -78,3 +78,8 @@ console.prototype(Object.create(null),{},Object.create({}))
 
 //node lib
 console.prototype(process)
+
+
+
+//direkt object
+protoLog(new DClass())
