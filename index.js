@@ -9,7 +9,7 @@
 
     var logTree = require('console-log-tree')
 
-    
+
     const getConstructorName = (o) => {
         if (o.prototype && o.prototype.constructor) {
             return o.prototype.constructor.name
@@ -88,24 +88,26 @@
 
     console.prototype = function (obj) {
         let log = this.log
-        if (arguments.length > 1) {
-            log.apply(this, arguments)
-            return
-        }
+
         if (!obj) {
             log(obj)
             return
         }
-        let types = [String, Array, Number, Symbol, RegExp, Boolean, ArrayBuffer]
-        for (const type of types) {
-            if (obj.constructor && obj.constructor === type) {
-                log(obj)
-                return
+
+        let out = []
+        if (arguments.length == 1) {
+             out.push(obj)
+        } else {
+            for (let index = 0; index < arguments.length; index++) {
+                const arg = arguments[index];
+                out.push(arg)
             }
         }
 
-        let tree = createTree(obj)
-        let parse = logTree.parse(tree)
-        log(parse)
+        for (const o of out) {
+            let tree = createTree(o)
+            let parse = logTree.parse(tree)
+            log(parse)
+        }
     }
 })()
