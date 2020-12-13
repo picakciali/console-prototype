@@ -59,6 +59,6 @@ console.prototype(o)
 
 ```
 ## out
-![alt text](https://i.hizliresim.com/wIMWA2.png)
+![alt text](https://i.hizliresim.com/rxmgWm.png)
 
 
