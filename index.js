@@ -86,7 +86,7 @@
         return tree
     }
 
-    console.prototype = function (obj) {
+    console.prototype = function () {
         var out = []
         for (let i = 0; i < arguments.length; i++) {
             const o = arguments[i];
