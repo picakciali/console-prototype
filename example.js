@@ -43,8 +43,22 @@ class DClass extends CClass{
     }
 }
 
+//static
 DClass.a = 'a'
 DClass.b = 'b'
 DClass.c = 'c'
 const o = new DClass()
 console.prototype(o)
+
+//function or class
+console.prototype(DClass)
+console.prototype(Function)
+
+//object
+console.prototype({})
+console.prototype(Object.create(null))
+console.prototype(Object.create({}))
+
+
+
+
