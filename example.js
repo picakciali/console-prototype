@@ -51,11 +51,11 @@ Fnc.prototype.getA = function () {
     return this.a
 }
 
-//class instance
+//DClass instance
 console.prototype(new DClass())
 
 
-//function instance
+//Fnc instance 
 console.prototype(new Fnc())
 
 //function instance
@@ -71,16 +71,3 @@ console.prototype(null)
 
 //arguments
 console.prototype(Object.create(null),{},Object.create({}))
-
-
-
-
-
-
-
-
-
-
-
-
-
