@@ -13,6 +13,9 @@
     const getProtoConstructorName = (o) => o.__proto__ && o.__proto__.constructor ? o.__proto__.constructor.name : 'Object'
 
     const getConstructorName = (o) => {
+        if (isFunction(o) && o.name) {
+            return o.name
+        }
         if (o.prototype && o.prototype.constructor) {
             return o.prototype.constructor.name
         }
@@ -109,3 +112,4 @@
         this.log.apply(this, out)
     }
 })()
+

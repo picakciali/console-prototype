@@ -75,3 +75,6 @@ console.prototype(null)
 
 //arguments
 console.prototype(Object.create(null),{},Object.create({}))
+
+//node lib
+console.prototype(process)
