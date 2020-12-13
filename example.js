@@ -42,22 +42,44 @@ class DClass extends CClass{
         return this.dProp
     }
 }
+function Fnc() {
+    this.a = 'a'
+    this.b = 'b'
+}
 
-//static
-DClass.a = 'a'
-DClass.b = 'b'
-DClass.c = 'c'
-const o = new DClass()
-console.prototype(o)
+Fnc.prototype.getA = function () {
+    return this.a
+}
 
-//function or class
+//class instance
+console.prototype(new DClass())
+
+
+//function instance
+console.prototype(new Fnc())
+
+//function instance
+console.prototype(Fnc)
+
+
+//class instance
 console.prototype(DClass)
-console.prototype(Function)
 
-//object
-console.prototype({})
-console.prototype(Object.create(null))
-console.prototype(Object.create({}))
+//null instance
+console.prototype(null)
+
+
+//arguments
+console.prototype(Object.create(null),{},Object.create({}))
+
+
+
+
+
+
+
+
+
 
 
 

@@ -87,27 +87,16 @@
     }
 
     console.prototype = function (obj) {
-        let log = this.log
-
-        if (!obj) {
-            log(obj)
-            return
-        }
-
-        let out = []
-        if (arguments.length == 1) {
-             out.push(obj)
-        } else {
-            for (let index = 0; index < arguments.length; index++) {
-                const arg = arguments[index];
-                out.push(arg)
+        var out = []
+        for (let i = 0; i < arguments.length; i++) {
+            const o = arguments[i];
+            if (o) {
+                let tree = createTree(o)
+                let parse = logTree.parse(tree)
+                out.push(parse)
             }
         }
 
-        for (const o of out) {
-            let tree = createTree(o)
-            let parse = logTree.parse(tree)
-            log(parse)
-        }
+        this.log.apply(this, out)
     }
 })()
