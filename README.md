@@ -6,6 +6,7 @@ This module expands the original consol object and gains a [prototype] property.
     npm i console-prototype
 ```
 
+
 ## usage 
 ```javascript
 require('console-prototype') 
