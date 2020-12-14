@@ -27,11 +27,11 @@
         
     const getProtos = (obj) => {
         let root = {}
-        root.name = getProtoConstructorName(obj)
+        root.name = 'prototype'
         root.children = []
         let o = obj
         let n
-        while (o) {
+        while (o != null) {
             let next = Object.getPrototypeOf(o)
             if (next != null) {
                 let propNames = Object.getOwnPropertyNames(next)
@@ -62,7 +62,7 @@
         let staticNode = { name: 'static', children: [] }
         let instanceNode = { name: 'instance', children: [] }
         let thisNode = { name: 'this', children: [] }
-        let protoNode = { name: 'prototype', children: [] }
+     
 
         root.name = constructor
         root.children = []
@@ -78,10 +78,9 @@
         }
         //prototypes
         let protos = getProtos(obj)
-        protoNode.children.push(protos)
 
         instanceNode.children.push(thisNode)
-        instanceNode.children.push(protoNode)
+        instanceNode.children.push(protos)
 
         root.children.push(staticNode)
         root.children.push(instanceNode)
