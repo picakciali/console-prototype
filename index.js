@@ -22,15 +22,12 @@
         return getProtoConstructorName(o)
     }
 
-    const isFunction = (o) => {
-        return o instanceof Function
-    }
+    const isFunction = (o) =>  o instanceof Function
+    
 
-    const keysNodeAdd = (obj, node) => {
-        Object.keys(obj).forEach(key => {
-            node.children.push({ name: key })
-        })
-    }
+    const keysNodeAdd = (obj, node) =>  Object.keys(obj).forEach(key => {node.children.push({ name: key })})
+        
+    
 
 
     const getProtos = (obj) => {
