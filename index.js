@@ -9,7 +9,6 @@
 
     const logTree = require('console-log-tree')
 
-
     const getProtoConstructorName = (o) => o.__proto__ && o.__proto__.constructor ? o.__proto__.constructor.name : 'Object'
 
     const getConstructorName = (o) => {
@@ -24,12 +23,8 @@
 
     const isFunction = (o) =>  o instanceof Function
     
-
     const keysNodeAdd = (obj, node) =>  Object.keys(obj).forEach(key => {node.children.push({ name: key })})
         
-    
-
-
     const getProtos = (obj) => {
         let root = {}
         root.name = getProtoConstructorName(obj)
