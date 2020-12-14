@@ -42,6 +42,11 @@ class DClass extends CClass{
         return this.dProp
     }
 }
+
+if (true) {
+    console.prototype(new DClass())
+    return
+}
 function Fnc() {
     this.a = 'a'
     this.b = 'b'

@@ -59,7 +59,7 @@ console.prototype(o)
 
 ```
 ## out
-![alt text](https://i.hizliresim.com/rxmgWm.png)
+![alt text](https://i.hizliresim.com/E8F7pL.png)
 
 ## usage 2
 ```javascript
