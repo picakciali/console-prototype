@@ -31,7 +31,7 @@
         root.children = []
         let o = obj
         let n
-        while (o != null) {
+        while (o) {
             let next = Object.getPrototypeOf(o)
             if (next != null) {
                 let propNames = Object.getOwnPropertyNames(next)
