@@ -1,5 +1,5 @@
 # console[prototype]
-This module expands the original consol object and gains a [prototype] property. If you call this property over the console object and pass a javascript object as a parameter, it displays the object's prototype chain as a tree on the terminal.The purpose of the module is to be able to view object chains as in browsers.
+This module expands the original console object and gains a [prototype] property. If you call this property over the console object and pass a javascript object as a parameter, it displays the object's prototype chain as a tree on the terminal.The purpose of the module is to be able to view object chains as in browsers.
 
 ## install
 ```javascript
