@@ -9,6 +9,7 @@
 
     const logTree = require('console-log-tree')
 
+
     const getProtoConstructorName = (o) => o.__proto__ && o.__proto__.constructor ? o.__proto__.constructor.name : 'Object'
 
     const getConstructorName = (o) => {
@@ -21,10 +22,12 @@
         return getProtoConstructorName(o)
     }
 
-    const isFunction = (o) =>  o instanceof Function
-    
-    const keysNodeAdd = (obj, node) =>  Object.keys(obj).forEach(key => {node.children.push({ name: key })})
-        
+    const isType = () => console.prototype.options ? console.prototype.options.type : false
+
+    const isFunction = (o) => o instanceof Function
+
+    const keysNodeAdd = (obj, node) => Object.keys(obj).forEach(key => { node.children.push({ name: isType() ? `${key} :[${typeof (obj[key])}]` : key }) })
+
     const getProtos = (obj) => {
         let root = {}
         root.name = 'prototype'
@@ -39,12 +42,17 @@
                 node.name = getProtoConstructorName(o)
                 node.children = []
                 propNames.forEach(n => {
-                    node.children.push({ name: n })
+                    if (isType()) {
+                        let x =  (n  === 'arguments' || n === 'caller') ? ((n === 'arguments') ? 'argumenst [array]' : 'caller [superCall]') : `${n} :[${typeof (next[n])}]`
+                        node.children.push({ name: x })
+                    } else {
+                        node.children.push({ name: n })
+                    }
                 })
                 if (!n) {
                     root.children.push(node)
-                }else{
-                  n.children.push(node)  
+                } else {
+                    n.children.push(node)
                 }
                 n = node
                 o = next
@@ -62,7 +70,7 @@
         let staticNode = { name: 'static', children: [] }
         let instanceNode = { name: 'instance', children: [] }
         let thisNode = { name: 'this', children: [] }
-     
+
 
         root.name = constructor
         root.children = []
@@ -88,7 +96,6 @@
 
         return tree
     }
-
     console.prototype = function () {
         var out = []
         for (let i = 0; i < arguments.length; i++) {
@@ -102,6 +109,6 @@
 
         this.log.apply(this, out)
     }
-
+    console.prototype.options = { type: false }
     module.exports = console.prototype.bind(console)
 })()

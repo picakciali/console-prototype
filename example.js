@@ -81,10 +81,11 @@ console.prototype(Object.create(null),{},Object.create({}))
 //node lib
 console.prototype(process)
 
-
-
-//direkt object
+//referance 
 protoLog(new DClass())
 
+//type funcion log ex  version [number]
+console.prototype.options.type = true
+console.prototype(new DClass())
 
 
