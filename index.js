@@ -43,7 +43,10 @@
                 node.children = []
                 propNames.forEach(n => {
                     if (isType()) {
-                        let x =  (n  === 'arguments' || n === 'caller') ? ((n === 'arguments') ? 'argumenst [array]' : 'caller [superCall]') : `${n} :[${typeof (next[n])}]`
+                        let x =  (n  === 'arguments' || n === 'caller') ?
+                                 ((n === 'arguments') ? 'argumenst [array]' 
+                                 : 'caller [superCall]') 
+                                 : `${n} :[${typeof (next[n])}]`
                         node.children.push({ name: x })
                     } else {
                         node.children.push({ name: n })
